@@ -1,12 +1,15 @@
-local_backend: true
+# Remova ou comente o local_backend se for testar online
+# local_backend: true
 
 backend:
-  name: git-gateway
+  name: github
+  repo: doomicusx/auraskinmaria # Seu repositório no GitHub
   branch: main
+  base_url: https://auraskinmaria.pages.dev # A URL do seu site na Cloudflare
+  auth_endpoint: oauth/authorize # Endpoint criado pela sua function [[path]].js
 
 media_folder: "public/images"
 public_folder: "/images"
-
 collections:
   # ================= SEO =================
   - name: "seo"
