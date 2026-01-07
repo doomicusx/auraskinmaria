@@ -1,0 +1,19 @@
+sectionLabel: "Benefícios"
+
+sectionTitle: "Benefícios pensados para a sua pele, do jeito certo"
+
+benefit1Icon: "/images/icon-benefit1.svg"
+benefit1Title: "Pele visivelmente mais limpa"
+benefit1Description: "Pele renovada desde a primeira sessão."
+
+benefit2Icon: "/images/icon-benefit2.svg"
+benefit2Title: "Ambiente seguro e acolhedor"
+benefit2Description: "Cuidado de verdade, sem pressa."
+
+benefit3Icon: "/images/icon-benefit3.svg"
+benefit3Title: "Menos cravos e oleosidade"
+benefit3Description: "Tratamento sem agressão."
+
+benefit4Icon: "/images/icon-benefit4.svg"
+benefit4Title: "Atendimento personalizado"
+benefit4Description: "Cada pele é única."

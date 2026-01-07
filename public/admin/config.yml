@@ -1,0 +1,541 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  # ================= SEO =================
+  - name: "seo"
+    label: "Configurações de SEO"
+    files:
+      - name: "seo"
+        label: "Configurações Gerais (SEO)"
+        file: "src/content/seo/seo.yml"
+        fields:
+          - {
+              label: "Nome do Site (Título)",
+              name: "title",
+              widget: "string",
+              hint: "O nome que aparece na aba do navegador e nos resultados de busca.",
+            }
+          - {
+              label: "Descrição do Site",
+              name: "description",
+              widget: "text",
+              hint: "Resumo curto do seu negócio. Aparece embaixo do título no Google (recomendado: entre 140 e 160 caracteres).",
+            }
+          - {
+              label: "Endereço do Site (URL)",
+              name: "siteUrl",
+              widget: "string",
+              hint: "O link oficial do seu site (Ex: https://www.seusite.com.br).",
+            }
+          - {
+              label: "Imagem de Compartilhamento (Open Graph)",
+              name: "ogImage",
+              widget: "image",
+              hint: "A foto que aparece quando você envia o link do site no WhatsApp, Instagram ou Facebook.",
+            }
+          - {
+              label: "Ícone da Aba (Favicon)",
+              name: "favicon",
+              widget: "image",
+              hint: "O pequeno ícone que aparece na aba do navegador (use uma imagem quadrada).",
+            }
+  # ================= THEME / CORES =================
+  - name: "theme"
+    label: "Estilo do Site"
+    files:
+      - name: "theme"
+        label: "Cores do Site"
+        file: "src/content/theme/theme.yml"
+        fields:
+          - label: "Paleta de Cores (Não altere os nomes dos campos)"
+            name: "colors"
+            widget: "object"
+            fields:
+              - label: "Cor do Texto Escuro"
+                name: "dark"
+                widget: "color"
+                hint: "Usado para textos em fundos claros."
+
+              - label: "Cor de Fundo Escura"
+                name: "fillDark"
+                widget: "color"
+                hint: "Cor principal de seções como o Footer."
+
+              - label: "Cor do Texto Claro"
+                name: "light"
+                widget: "color"
+                hint: "Usado para textos em fundos escuros."
+
+              - label: "Cor de Fundo Clara"
+                name: "fillLight"
+                widget: "color"
+                hint: "Cor principal de fundo do site e cards clars."
+
+              - label: "Cor de Fundo Clara (Secundária)"
+                name: "fillLightSecondary"
+                widget: "color"
+                hint: "Usado para detalhes e variações de fundo claro."
+  # ================= HERO =================
+  - name: "hero"
+    label: "Seção Principal & Menu"
+    files:
+      - name: "hero"
+        label: "Conteúdo e Menu"
+        file: "src/content/hero/hero.yml"
+        fields:
+          # --- SEÇÃO PRINCIPAL (HERO) ---
+          - {
+              label: "Título Principal",
+              name: "title",
+              widget: "string",
+              hint: "A frase de maior impacto no topo.",
+            }
+          - {
+              label: "Texto de Apoio (Subtítulo)",
+              name: "subtitle",
+              widget: "text",
+              hint: "Explicação curta abaixo do título.",
+            }
+          - {
+              label: "Texto do Botão Principal",
+              name: "ctaText",
+              widget: "string",
+              hint: "Ex: Falar com Especialista",
+            }
+          - {
+              label: "Link do Botão Principal",
+              name: "ctaLink",
+              widget: "string",
+              hint: "Link para onde o botão leva.",
+            }
+          - {
+              label: "Imagem de Fundo",
+              name: "backgroundImage",
+              widget: "image",
+              hint: "Foto que cobre o fundo de todo o topo.",
+            }
+          - {
+              label: "Aviso da Barra Superior",
+              name: "topBarText",
+              widget: "string",
+              hint: "Frase na faixa bem no topo do site.",
+            }
+          - {
+              label: "Frase da Barra de Promoção",
+              name: "promoBarText",
+              widget: "string",
+              hint: "Texto que aparece na barra promocional.",
+            }
+
+          # --- IDENTIDADE VISUAL ---
+          - {
+              label: "Logotipo",
+              name: "logo",
+              widget: "image",
+              hint: "A imagem da logo que aparece no menu.",
+            }
+          - {
+              label: "Descrição da Logo",
+              name: "logoAlt",
+              widget: "string",
+              hint: "Texto alternativo para o Google (Ex: Logo da Barbearia X).",
+            }
+
+          # --- NOMES DOS LINKS DO MENU (HEADER) ---
+          - {
+              label: "Menu - Nome para 'Dúvidas'",
+              name: "navDuvidas",
+              widget: "string",
+              hint: "Como o link de FAQ aparecerá no menu.",
+            }
+          - {
+              label: "Menu - Nome para 'Sobre'",
+              name: "navSobre",
+              widget: "string",
+              hint: "Ex: Nossa História",
+            }
+          - {
+              label: "Menu - Nome para 'Serviços'",
+              name: "navServicos",
+              widget: "string",
+              hint: "Ex: O que fazemos",
+            }
+          - {
+              label: "Menu - Nome para 'Benefícios'",
+              name: "navBeneficios",
+              widget: "string",
+              hint: "Ex: Vantagens",
+            }
+          - {
+              label: "Menu - Nome para 'Avaliações'",
+              name: "navAvaliacoes",
+              widget: "string",
+              hint: "Ex: Depoimentos",
+            }
+          - {
+              label: "Menu - Nome para 'Contato'",
+              name: "navContato",
+              widget: "string",
+              hint: "Ex: Fale Conosco",
+            }
+
+  # ================= SOBRE =================
+  - name: "sobre"
+    label: "Sobre a Empresa"
+    files:
+      - name: "sobre"
+        label: "Seção Sobre"
+        file: "src/content/sobre/sobre.yml"
+        fields:
+          - {
+              label: "Texto Principal / Biografia",
+              name: "title",
+              widget: "text",
+              hint: "História ou descrição detalhada da empresa.",
+            }
+          - {
+              label: "Estatística 1",
+              name: "stat1",
+              widget: "string",
+              hint: "Ex: +10 anos de experiência",
+            }
+          - {
+              label: "Estatística 2",
+              name: "stat2",
+              widget: "string",
+              hint: "Ex: 5.000 clientes satisfeitos",
+            }
+          - {
+              label: "Estatística 3",
+              name: "stat3",
+              widget: "string",
+              hint: "Ex: Equipe Especializada",
+            }
+          - {
+              label: "Estatística 4",
+              name: "stat4",
+              widget: "string",
+              hint: "Ex: Atendimento Premium",
+            }
+          - {
+              label: "Ícone ou Detalhe Visual",
+              name: "sobreIcon",
+              widget: "image",
+              required: false,
+              hint: "Opcional: Uma imagem ou ícone decorativo que aparece ao lado do texto sobre.",
+            }
+
+  # ================= SERVIÇOS =================
+  - name: "servicos"
+    label: "Nossos Serviços"
+    files:
+      - name: "servicos"
+        label: "Listagem de Serviços"
+        file: "src/content/servicos/servicos.yml"
+        fields:
+          - { label: "Título da Seção", name: "title", widget: "string" }
+          - {
+              label: "Descrição da Seção",
+              name: "description",
+              widget: "text",
+              hint: "Texto explicativo abaixo do título.",
+            }
+
+          - label: "Filtros de Categorias"
+            name: "categories"
+            widget: "list"
+            field:
+              label: "Nome da Categoria"
+              name: "category"
+              widget: "string"
+
+          - { label: "Texto do Botão (CTA)", name: "ctaText", widget: "string" }
+          - { label: "Link do Botão (CTA)", name: "ctaLink", widget: "string" }
+
+          - label: "Grupos/Cards de Serviços"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Foto do Card", name: "image", widget: "image" }
+              - {
+                  label: "Descrição da Foto (Alt)",
+                  name: "imageAlt",
+                  widget: "string",
+                  hint: "Para acessibilidade e Google.",
+                }
+
+              - label: "Lista de Itens deste Card"
+                name: "services"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Nome do Serviço",
+                      name: "title",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Resumo do Serviço",
+                      name: "description",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Tempo Estimado",
+                      name: "duration",
+                      widget: "string",
+                      hint: "Ex: 1h 30min",
+                    }
+                  - {
+                      label: "Valor",
+                      name: "price",
+                      widget: "string",
+                      hint: "Ex: R$ 150,00",
+                    }
+
+  # ================= AVALIAÇÕES =================
+  - name: "avaliacoes"
+    label: "Depoimentos / Avaliações"
+    files:
+      - name: "avaliacoes"
+        label: "Seção de Avaliações"
+        file: "src/content/avaliacoes/avaliacoes.yml"
+        fields:
+          - {
+              label: "Texto Curto (Selo)",
+              name: "sectionLabel",
+              widget: "string",
+              hint: "Aquele texto pequeno que fica acima do título.",
+            }
+          - {
+              label: "Título Grande da Seção",
+              name: "sectionTitle",
+              widget: "string",
+            }
+
+          - { label: "Texto do Botão", name: "buttonText", widget: "string" }
+          - { label: "Link do Botão", name: "buttonLink", widget: "string" }
+
+          - label: "Lista de Depoimentos"
+            name: "items"
+            widget: "list"
+            types:
+              - label: "Depoimento com Foto"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Tipo",
+                      name: "type",
+                      widget: "hidden",
+                      default: "image",
+                    }
+                  - { label: "Foto do Cliente", name: "image", widget: "image" }
+                  - { label: "Alt da Foto", name: "alt", widget: "string" }
+                  - {
+                      label: "Texto do Depoimento",
+                      name: "text",
+                      widget: "text",
+                    }
+                  - { label: "Nome do Autor", name: "author", widget: "string" }
+
+              - label: "Depoimento em Vídeo"
+                name: "video"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Tipo",
+                      name: "type",
+                      widget: "hidden",
+                      default: "video",
+                    }
+                  - { label: "Arquivo de Vídeo", name: "video", widget: "file" }
+
+  # ================= BENEFÍCIOS =================
+  - name: "beneficios"
+    label: "Vantagens / Benefícios"
+    files:
+      - name: "beneficios"
+        label: "Seção de Benefícios"
+        file: "src/content/beneficios/beneficios.yml"
+        fields:
+          - {
+              label: "Texto Curto (Selo)",
+              name: "sectionLabel",
+              widget: "string",
+            }
+          - { label: "Título da Seção", name: "sectionTitle", widget: "string" }
+
+          - { label: "Ícone Vantagem 1", name: "benefit1Icon", widget: "image" }
+          - {
+              label: "Título Vantagem 1",
+              name: "benefit1Title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição Vantagem 1",
+              name: "benefit1Description",
+              widget: "string",
+            }
+
+          - { label: "Ícone Vantagem 2", name: "benefit2Icon", widget: "image" }
+          - {
+              label: "Título Vantagem 2",
+              name: "benefit2Title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição Vantagem 2",
+              name: "benefit2Description",
+              widget: "string",
+            }
+
+          - { label: "Ícone Vantagem 3", name: "benefit3Icon", widget: "image" }
+          - {
+              label: "Título Vantagem 3",
+              name: "benefit3Title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição Vantagem 3",
+              name: "benefit3Description",
+              widget: "string",
+            }
+
+          - { label: "Ícone Vantagem 4", name: "benefit4Icon", widget: "image" }
+          - {
+              label: "Título Vantagem 4",
+              name: "benefit4Title",
+              widget: "string",
+            }
+          - {
+              label: "Descrição Vantagem 4",
+              name: "benefit4Description",
+              widget: "string",
+            }
+
+  # ================= CTA / CONTATO =================
+  - name: "cta"
+    label: "Chamada para Ação (CTA)"
+    files:
+      - name: "cta"
+        label: "Seção de Contato"
+        file: "src/content/cta/cta.yml"
+        fields:
+          - {
+              label: "ID de Âncora",
+              name: "sectionId",
+              widget: "string",
+              hint: "Não altere se não souber. Usado para o link do menu.",
+            }
+          - { label: "Título Chamativo", name: "title", widget: "string" }
+          - { label: "Texto do Botão", name: "buttonText", widget: "string" }
+          - { label: "Link do Botão", name: "buttonLink", widget: "string" }
+          - {
+              label: "Imagem de Fundo",
+              name: "backgroundImage",
+              widget: "image",
+            }
+          - { label: "Alt da Imagem", name: "backgroundAlt", widget: "string" }
+
+  # ================= DÚVIDAS / FAQ =================
+  - name: "duvidas"
+    label: "Dúvidas Frequentes (FAQ)"
+    files:
+      - name: "duvidas"
+        label: "Perguntas e Respostas"
+        file: "src/content/duvidas/duvidas.yml"
+        fields:
+          - {
+              label: "Texto Curto (Selo)",
+              name: "sectionLabel",
+              widget: "string",
+            }
+          - { label: "Título da Seção", name: "sectionTitle", widget: "string" }
+          - label: "Lista de Perguntas"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Pergunta", name: "question", widget: "string" }
+              - { label: "Resposta", name: "answer", widget: "text" }
+
+  # ================= PROMO =================
+  - name: "promo"
+    label: "Banner Promocional"
+    files:
+      - name: "promo"
+        label: "Seção Promo"
+        file: "src/content/promo/promo.yml"
+        fields:
+          - { label: "Título da Promoção", name: "title", widget: "string" }
+          - { label: "Texto da Promoção", name: "description", widget: "text" }
+          - { label: "Texto do Botão", name: "buttonText", widget: "string" }
+          - { label: "Link do Botão", name: "buttonLink", widget: "string" }
+          - { label: "Endereço exibido", name: "address", widget: "string" }
+          - {
+              label: "Imagem de Fundo",
+              name: "backgroundImage",
+              widget: "image",
+            }
+          - { label: "Alt da Imagem", name: "backgroundAlt", widget: "string" }
+
+  # ================= FOOTER =================
+  - name: "footer"
+    label: "Rodapé (Footer)"
+    files:
+      - name: "footer"
+        label: "Conteúdo do Rodapé"
+        file: "src/content/footer/footer.yml"
+        fields:
+          - { label: "Logo do Rodapé", name: "logo", widget: "image" }
+          - { label: "Alt do Logo", name: "logoAlt", widget: "string" }
+
+          - label: "Links do Menu"
+            name: "menu"
+            widget: "list"
+            fields:
+              - { label: "Texto do Link", name: "label", widget: "string" }
+              - { label: "Endereço (Link)", name: "href", widget: "string" }
+
+          - label: "Redes Sociais"
+            name: "socials"
+            widget: "list"
+            fields:
+              - {
+                  label: "Nome da Rede",
+                  name: "label",
+                  widget: "string",
+                  hint: "Ex: Instagram",
+                }
+              - { label: "Link do Perfil", name: "href", widget: "string" }
+
+          - { label: "Endereço Completo", name: "address", widget: "text" }
+
+          - label: "Canais de Contato"
+            name: "contacts"
+            widget: "list"
+            fields:
+              - {
+                  label: "Texto Exibido",
+                  name: "label",
+                  widget: "string",
+                  hint: "Ex: (11) 99999-9999",
+                }
+              - {
+                  label: "Link de Ação",
+                  name: "href",
+                  widget: "string",
+                  hint: "Ex: tel:+5511999999999 ou mailto:contato@site.com",
+                }
+
+          - {
+              label: "Texto de Direitos Autorais",
+              name: "copyright",
+              widget: "string",
+              hint: "Ex: © 2024 Nome da Empresa. Todos os direitos reservados.",
+            }

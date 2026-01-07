@@ -1,0 +1,32 @@
+sectionLabel: Dúvidas
+sectionTitle: Perguntas Frequentes
+items:
+  - question: Tem contraindicação?
+    answer: Cada caso é avaliado individualmente. Em geral, não há contraindicações.
+
+  - question: Posso usar maquiagem no mesmo dia?
+    answer: O ideal é não usar maquiagem no dia do procedimento, para a pele respirar melhor.
+
+  - question: A limpeza dói?
+    answer: Não. O procedimento é feito de forma suave e confortável.
+
+  - question: Quanto tempo dura o efeito?
+    answer: Os resultados costumam durar semanas, dependendo do tipo de pele.
+
+  - question: Gestante pode fazer?
+    answer: Recomendamos uma avaliação prévia antes do procedimento para garantir total segurança.
+
+  - question: Quantas sessões são necessárias?
+    answer: Em muitos casos, uma única sessão já traz resultados visíveis, mas o ideal pode variar conforme a pele.
+
+  - question: Com que frequência posso fazer a limpeza?
+    answer: Normalmente a cada 30 dias, mas isso pode variar de acordo com o tipo e a necessidade da pele.
+
+  - question: É indicado para pele sensível?
+    answer: Sim. O protocolo é adaptado para peles sensíveis, sempre respeitando os limites da pele.
+
+  - question: Posso me expor ao sol após o procedimento?
+    answer: Recomenda-se evitar exposição direta ao sol no mesmo dia e usar protetor solar adequadamente.
+
+  - question: Homens também podem fazer o tratamento?
+    answer: Sim. O tratamento é indicado para todos os tipos de pele, independentemente do gênero.

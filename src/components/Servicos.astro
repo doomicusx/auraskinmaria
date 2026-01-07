@@ -1,0 +1,136 @@
+---
+const {
+  title,
+  description,
+  categories = [],
+  ctaText,
+  ctaLink,
+  cards = [],
+} = Astro.props;
+---
+
+<section class="w-full rounded-2xl cms-bg-dark js-servicos" id="servicos">
+  <div class="container mx-auto px-2 py-24">
+    <header class="flex flex-col gap-6 justify-center items-center pb-24">
+      <span
+        class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full border cms-border-light js-servico-decorativo"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 12 14"
+          class="size-3.5 block cms-fill-light"
+        >
+          <path
+            d="M10.5 2.00036C9.73904 1.99967 8.98632 2.15784 8.29 2.46473C7.34625 0.879108 5.795 0.089733 5.72375 0.0528581C5.65428 0.0180978 5.57768 0 5.5 0C5.42232 0 5.34572 0.0180978 5.27625 0.0528581C5.205 0.089108 3.65125 0.879108 2.71 2.46473C2.01368 2.15784 1.26096 1.99967 0.5 2.00036C0.367392 2.00036 0.240215 2.05304 0.146447 2.1468C0.0526785 2.24057 0 2.36775 0 2.50036V5.00036C0.00164971 6.37198 0.515112 7.69362 1.43989 8.7066C2.36467 9.71958 3.6342 10.351 5 10.4772V12.6916L2.72375 11.5529C2.66498 11.5235 2.601 11.506 2.53547 11.5013C2.46993 11.4966 2.40412 11.5049 2.34178 11.5257C2.27945 11.5465 2.22182 11.5793 2.17219 11.6224C2.12255 11.6654 2.08188 11.7178 2.0525 11.7766C2.02312 11.8354 2.0056 11.8994 2.00094 11.9649C1.99628 12.0304 2.00458 12.0962 2.02535 12.1586C2.04613 12.2209 2.07898 12.2785 2.12203 12.3282C2.16508 12.3778 2.21748 12.4185 2.27625 12.4479L5.27625 13.9479C5.34572 13.9826 5.42232 14.0007 5.5 14.0007C5.57768 14.0007 5.65428 13.9826 5.72375 13.9479L8.72375 12.4479C8.84243 12.3885 8.93268 12.2845 8.97465 12.1586C9.01661 12.0327 9.00684 11.8953 8.9475 11.7766C8.88816 11.6579 8.7841 11.5677 8.65822 11.5257C8.53233 11.4838 8.39493 11.4935 8.27625 11.5529L6 12.6916V10.4772C7.3658 10.351 8.63533 9.71958 9.56011 8.7066C10.4849 7.69362 10.9984 6.37198 11 5.00036V2.50036C11 2.36775 10.9473 2.24057 10.8536 2.1468C10.7598 2.05304 10.6326 2.00036 10.5 2.00036ZM5 9.47286C3.90043 9.34854 2.88505 8.82399 2.14737 7.99917C1.40968 7.17435 1.00128 6.10693 1 5.00036V3.02786C2.09957 3.15217 3.11495 3.67673 3.85263 4.50155C4.59032 5.32637 4.99872 6.39379 5 7.50036V9.47286ZM5.5 5.21036C5.07938 4.29653 4.41724 3.51488 3.585 2.94973C4.18313 1.96286 5.085 1.33098 5.5 1.07473C5.91563 1.32973 6.8175 1.96161 7.415 2.94973C6.58289 3.51502 5.92078 4.29663 5.5 5.21036ZM10 5.00036C9.99872 6.10693 9.59032 7.17435 8.85264 7.99917C8.11495 8.82399 7.09957 9.34854 6 9.47286V7.50036C6.00128 6.39379 6.40968 5.32637 7.14736 4.50155C7.88505 3.67673 8.90043 3.15217 10 3.02786V5.00036Z"
+          ></path>
+        </svg>
+        <p class="cms-text-light font-inst text-[.875rem] leading-none">
+          Serviços
+        </p>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 12 14"
+          class="size-3.5 block cms-fill-light"
+        >
+          <path
+            d="M10.5 2.00036C9.73904 1.99967 8.98632 2.15784 8.29 2.46473C7.34625 0.879108 5.795 0.089733 5.72375 0.0528581C5.65428 0.0180978 5.57768 0 5.5 0C5.42232 0 5.34572 0.0180978 5.27625 0.0528581C5.205 0.089108 3.65125 0.879108 2.71 2.46473C2.01368 2.15784 1.26096 1.99967 0.5 2.00036C0.367392 2.00036 0.240215 2.05304 0.146447 2.1468C0.0526785 2.24057 0 2.36775 0 2.50036V5.00036C0.00164971 6.37198 0.515112 7.69362 1.43989 8.7066C2.36467 9.71958 3.6342 10.351 5 10.4772V12.6916L2.72375 11.5529C2.66498 11.5235 2.601 11.506 2.53547 11.5013C2.46993 11.4966 2.40412 11.5049 2.34178 11.5257C2.27945 11.5465 2.22182 11.5793 2.17219 11.6224C2.12255 11.6654 2.08188 11.7178 2.0525 11.7766C2.02312 11.8354 2.0056 11.8994 2.00094 11.9649C1.99628 12.0304 2.00458 12.0962 2.02535 12.1586C2.04613 12.2209 2.07898 12.2785 2.12203 12.3282C2.16508 12.3778 2.21748 12.4185 2.27625 12.4479L5.27625 13.9479C5.34572 13.9826 5.42232 14.0007 5.5 14.0007C5.57768 14.0007 5.65428 13.9826 5.72375 13.9479L8.72375 12.4479C8.84243 12.3885 8.93268 12.2845 8.97465 12.1586C9.01661 12.0327 9.00684 11.8953 8.9475 11.7766C8.88816 11.6579 8.7841 11.5677 8.65822 11.5257C8.53233 11.4838 8.39493 11.4935 8.27625 11.5529L6 12.6916V10.4772C7.3658 10.351 8.63533 9.71958 9.56011 8.7066C10.4849 7.69362 10.9984 6.37198 11 5.00036V2.50036C11 2.36775 10.9473 2.24057 10.8536 2.1468C10.7598 2.05304 10.6326 2.00036 10.5 2.00036ZM5 9.47286C3.90043 9.34854 2.88505 8.82399 2.14737 7.99917C1.40968 7.17435 1.00128 6.10693 1 5.00036V3.02786C2.09957 3.15217 3.11495 3.67673 3.85263 4.50155C4.59032 5.32637 4.99872 6.39379 5 7.50036V9.47286ZM5.5 5.21036C5.07938 4.29653 4.41724 3.51488 3.585 2.94973C4.18313 1.96286 5.085 1.33098 5.5 1.07473C5.91563 1.32973 6.8175 1.96161 7.415 2.94973C6.58289 3.51502 5.92078 4.29663 5.5 5.21036ZM10 5.00036C9.99872 6.10693 9.59032 7.17435 8.85264 7.99917C8.11495 8.82399 7.09957 9.34854 6 9.47286V7.50036C6.00128 6.39379 6.40968 5.32637 7.14736 4.50155C7.88505 3.67673 8.90043 3.15217 10 3.02786V5.00036Z"
+          ></path>
+        </svg>
+      </span>
+      <h2
+        class="cms-text-light text-[3.125rem] text-center leading-none lg:text-[4.2088rem] tracking-tighter max-w-[25ch] js-servicos-title font-inst"
+      >
+        {title}
+      </h2>
+
+      <p
+        class="cms-text-light text-base text-center max-w-[50ch] leading-tight js-servicos-desc"
+      >
+        {description}
+      </p>
+
+      <nav
+        class="flex items-center justify-center gap-6 flex-wrap js-servicos-item"
+      >
+        {
+          categories.map((item) => (
+            <p class="cms-text-dark text-[1.3125rem] px-6 py-2 leading-none rounded-full cms-bg-light font-inst">
+              {item.category}
+            </p>
+          ))
+        }
+      </nav>
+    </header>
+
+    <div class="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
+      {
+        cards.map((card) => (
+          <article class="flex flex-col gap-4 js-servicos-item">
+            <figure class="w-full overflow-hidden rounded-t-2xl h-61.5">
+              <img
+                src={card.image}
+                alt={card.imageAlt}
+                class="w-full h-full object-cover"
+              />
+            </figure>
+
+            <div class="cms-bg-light rounded-b-2xl p-10 flex flex-col gap-6">
+              {card.services.map((item) => (
+                <div class="flex flex-col lg:flex-row gap-5 lg:gap-0 lg:items-end lg:justify-between border-b cms-border-custom-opacity pb-4">
+                  <div class="cms-text-dark flex flex-col gap-3">
+                    <h3 class="font-inst leading-none text-[1.7769rem] max-w-[30ch]">
+                      {item.title}
+                    </h3>
+                    <p class="text-base leading-tight max-w-[25ch]">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <ul class="flex gap-2">
+                    <li class="font-inst border cms-border-dark rounded-full py-1.5 px-4 cms-text-dark">
+                      {item.duration}
+                    </li>
+                    <li class="font-inst border cms-border-dark rounded-full py-1.5 px-4 cms-text-dark">
+                      {item.price}
+                    </li>
+                  </ul>
+                </div>
+              ))}
+
+              <a
+                href={ctaLink}
+                class="group w-fit inline-flex items-center gap-1.5 px-4 py-3 rounded-full cms-bg-dark cms-text-light font-inst text-[1.3125rem] leading-none tracking-tighter transition-colors duration-500 ease-in-out hover-cms-bg-dark hover-cms-text-light"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 12 14"
+                  class="size-5 transition-transform duration-1200 ease-in-out group-hover:rotate-360 motion-reduce:transform-none"
+                >
+                  <path
+                    class="cms-fill-light transition-colors duration-500 ease-in-out group-hover-cms-fill-light"
+                    d="M12 6.83686C12 6.83686 9.74419 6.83686 8.14326 6.14382C7.35436 5.72293 6.76119 5.0104 6.49034 4.15826C6.01907 2.84494 5.99822 0 5.99822 0C5.99822 0 5.97746 2.84841 5.50966 4.15826C5.2375 5.00968 4.6447 5.72178 3.85674 6.14382C2.25581 6.83686 0 6.83686 0 6.83686C0 6.83686 2.25581 6.83686 3.85674 7.52991C4.64375 7.95477 5.23602 8.66746 5.50966 9.51894C5.97746 10.8288 5.99822 13.6772 5.99822 13.6772C5.99822 13.6772 6.01907 10.8288 6.49034 9.51894C6.76139 8.66604 7.35438 7.95248 8.14326 7.52991C9.74419 6.83686 12 6.83686 12 6.83686Z"
+                  />
+                </svg>
+                <span>{ctaText}</span>
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 12 14"
+                  class="size-5 transition-transform duration-1200 ease-in-out group-hover:rotate-360 motion-reduce:transform-none"
+                >
+                  <path
+                    class="cms-fill-light transition-colors duration-500 ease-in-out group-hover-cms-fill-light"
+                    d="M12 6.83686C12 6.83686 9.74419 6.83686 8.14326 6.14382C7.35436 5.72293 6.76119 5.0104 6.49034 4.15826C6.01907 2.84494 5.99822 0 5.99822 0C5.99822 0 5.97746 2.84841 5.50966 4.15826C5.2375 5.00968 4.6447 5.72178 3.85674 6.14382C2.25581 6.83686 0 6.83686 0 6.83686C0 6.83686 2.25581 6.83686 3.85674 7.52991C4.64375 7.95477 5.23602 8.66746 5.50966 9.51894C5.97746 10.8288 5.99822 13.6772 5.99822 13.6772C5.99822 13.6772 6.01907 10.8288 6.49034 9.51894C6.76139 8.66604 7.35438 7.95248 8.14326 7.52991C9.74419 6.83686 12 6.83686 12 6.83686Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

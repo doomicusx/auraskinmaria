@@ -1,0 +1,124 @@
+---
+import { getEntry } from "astro:content";
+import "../styles/global.css";
+
+const themeEntry = await getEntry("theme", "theme");
+const seoEntry = await getEntry("seo", "seo");
+
+const colors = themeEntry?.data?.colors;
+const seo = seoEntry?.data;
+
+const title = seo?.title ?? "AuraSkin";
+const description =
+  seo?.description ??
+  "Clínica especializada em estética avançada e cuidados com a pele.";
+const siteUrl = seo?.siteUrl ?? "https://www.seusite.com";
+const ogImage = seo?.ogImage ?? "/images/og-default.jpg";
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{seo?.title ?? "AuraSkin"}</title>
+  <meta
+    name="description"
+    content={seo?.description ??
+      "Clínica especializada em estética e cuidados com a pele."}
+  />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={seo?.title ?? "AuraSkin"} />
+  <meta
+    property="og:description"
+    content={seo?.description ??
+      "Clínica especializada em estética e cuidados com a pele."}
+  />
+  <meta property="og:image" content={seo?.ogImage ?? "/images/og-image.jpg"} />
+  <link
+    rel="icon"
+    href={seo?.favicon ?? "/images/favicon.svg"}
+    type="image/svg+xml"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet"
+  />
+
+  {
+    colors && (
+      <style
+        is:inline
+        set:html={`
+:root {
+  --val-dark: ${colors.dark};
+  --val-fill-dark: ${colors.fillDark};
+  --val-light: ${colors.light};
+  --val-fill-light: ${colors.fillLight};
+  --val-fill-light-secondary: ${colors.fillLightSecondary};
+}
+
+/* BACKGROUNDS */
+.cms-bg-dark { background-color: ${colors.fillDark} !important; }
+.cms-bg-light { background-color: ${colors.fillLight} !important; }
+.cms-bg-light-secondary { background-color: ${colors.fillLightSecondary} !important; }
+
+/* TEXT COLORS */
+.cms-text-dark { color: ${colors.dark} !important; }
+.cms-text-light { color: ${colors.light} !important; }
+
+/* SVG FILLS */
+.cms-fill-dark { fill: ${colors.fillDark} !important; }
+.cms-fill-light { fill: ${colors.fillLight} !important; }
+
+/* BORDERS */
+.cms-border-light { border-color: ${colors.fillLight} !important; }
+.cms-border-dark { border-color: ${colors.fillDark} !important; }
+
+/* HOVERS */
+.hover-cms-bg-dark:hover { background-color: ${colors.fillDark} !important; }
+.hover-cms-text-light:hover { color: ${colors.light} !important; }
+.group:hover .group-hover-cms-fill-light { fill: ${colors.light} !important; }
+.hover-cms-text-light-alpha:hover { color: ${colors.light}66 !important; }
+`}
+      />
+    )
+  }
+  <script
+    is:inline
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script is:inline>
+    // Script para lidar com o redirecionamento após o login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</head>
+
+<body class="cms-bg-light font-jet tracking-normal cms-text-dark">
+  <div class="lg:p-4 p-2">
+    <slot />
+  </div>
+
+  <slot name="full" />
+
+  <div class="lg:p-4 p-2">
+    <slot name="after-full" />
+    <slot name="promo" />
+    <slot name="footer" />
+  </div>
+  <script>
+    import "../js/main.js";
+  </script>
+</body>

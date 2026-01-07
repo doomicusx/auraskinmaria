@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Hero from "../components/Hero.astro";
+import Sobre from "../components/Sobre.astro";
+import Servicos from "../components/Servicos.astro";
+import Beneficios from "../components/Beneficios.astro";
+import Avaliacoes from "../components/Avaliacoes.astro";
+import Cta from "../components/Cta.astro";
+import Duvidas from "../components/Duvidas.astro";
+import Promo from "../components/Promo.astro";
+import Footer from "../components/Footer.astro";
+import { getEntry } from "astro:content";
+
+const hero = await getEntry("hero", "hero");
+const sobre = await getEntry("sobre", "sobre");
+const servicos = await getEntry("servicos", "servicos");
+const beneficios = await getEntry("beneficios", "beneficios");
+const avaliacoes = await getEntry("avaliacoes", "avaliacoes");
+const cta = await getEntry("cta", "cta");
+const duvidas = await getEntry("duvidas", "duvidas");
+const promo = await getEntry("promo", "promo");
+const footer = await getEntry("footer", "footer");
+---
+
+<BaseLayout title="AuraSkin">
+  {hero && <Hero {...hero.data} />}
+  {sobre && <Sobre {...sobre.data} />}
+  {servicos && <Servicos {...servicos.data} />}
+  {beneficios && <Beneficios {...beneficios.data} />}
+  {avaliacoes && <Avaliacoes {...avaliacoes.data} />}
+  {cta && <Cta slot="full" {...cta.data} />}
+  {duvidas && <Duvidas slot="after-full" {...duvidas.data} />}
+  {promo && <Promo slot="promo" {...promo.data} />}
+  {footer && <Footer slot="footer" {...footer.data} />}
+</BaseLayout>

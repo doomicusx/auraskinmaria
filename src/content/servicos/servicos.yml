@@ -1,0 +1,51 @@
+title: "Nossos Tratamentos Faciais"
+
+description: >
+  Cuidamos da sua pele do começo ao fim. Avaliamos, tratamos e
+  finalizamos tudo no mesmo atendimento, de forma simples, segura e
+  eficaz sem complicação e com resultados visíveis desde a primeira
+  sessão.
+
+categories:
+  - category: "Tratamento Facial"
+  - category: "Tratamentos Corporais"
+
+ctaText: "Agende sua sessão"
+ctaLink: "https://api.whatsapp.com/send/?phone=5511945380602&text=Hello+Pedro%21&type=phone_number&app_absent=0"
+
+cards:
+  - image: "/images/service2.webp"
+    imageAlt: "Pessoa relaxando durante tratamento facial"
+    services:
+      - title: "Limpeza de Pele Profunda"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"
+
+      - title: "Limpeza de Pele Calmante"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"
+
+      - title: "Limpeza de Pele + Extração"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"
+
+  - image: "/images/service1.webp"
+    imageAlt: "Pessoa relaxando durante tratamento facial"
+    services:
+      - title: "Esfoliação Corporal"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"
+
+      - title: "Esfoliação com Café & Coco"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"
+
+      - title: "Ritual Corporal Relaxante"
+        description: "Acalma a pele, reduz vermelhidão e desconforto."
+        duration: "80–40 min"
+        price: "R$ 90"

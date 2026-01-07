@@ -1,0 +1,49 @@
+sectionLabel: "Avaliações"
+sectionTitle: "Quem já cuidou da pele aqui"
+buttonText: "Veja mais avaliações →"
+buttonLink: "#"
+
+items:
+  - type: image
+    image: "/images/cliente1.webp"
+    alt: "Cliente AuraSkin"
+    stars: 5
+    text: "Minha pele mudou muito depois da limpeza. Zero agressão."
+    author: "Rafaela – Instagram"
+
+  - type: image
+    image: "/images/cliente2.webp"
+    alt: "Cliente AuraSkin"
+    stars: 5
+    text: "Nunca tinha feito limpeza sem ficar vermelha depois."
+    author: "Rafaela – Instagram"
+
+  - type: video
+    video: "/images/videoavaliacao1.mp4"
+
+  - type: image
+    image: "/images/cliente1.webp"
+    alt: "Cliente AuraSkin"
+    stars: 5
+    text: "Ambiente seguro e atendimento impecável."
+    author: "Rafaela – Instagram"
+
+  - type: image
+    image: "/images/cliente1.webp"
+    alt: "Cliente AuraSkin"
+    stars: 5
+    text: "Ambiente seguro e atendimento impecável."
+    author: "Rafaela – Instagram"
+
+  - type: video
+    video: "/images/videoavaliacao1.mp4"
+
+  - type: image
+    image: "/images/cliente1.webp"
+    alt: "Cliente AuraSkin"
+    stars: 5
+    text: "Ambiente seguro e atendimento impecável."
+    author: "Rafaela – Instagram"
+
+  - type: video
+    video: "/images/videoavaliacao1.mp4"

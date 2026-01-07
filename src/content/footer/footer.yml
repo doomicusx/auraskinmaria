@@ -1,0 +1,38 @@
+logo: "/images/logo.svg"
+logoAlt: "Logo AuraSkin"
+
+menu:
+  - label: "Sobre"
+    href: "#sobre"
+  - label: "Serviços"
+    href: "#servicos"
+  - label: "Benefícios"
+    href: "#beneficios"
+  - label: "Avaliações"
+    href: "#avaliacoes"
+  - label: "Dúvidas"
+    href: "#duvidas"
+  - label: "Contato"
+    href: "#contato"
+
+socials:
+  - label: "Instagram"
+    href: "https://instagram.com/"
+  - label: "X / Twitter"
+    href: "https://x.com/"
+  - label: "Facebook"
+    href: "https://facebook.com/"
+
+address: |
+  Rua das Camélias, 248
+  Jardim Aurora – São Paulo
+
+contacts:
+  - label: "WhatsApp"
+    href: "https://api.whatsapp.com/send/?phone=5511945380602"
+  - label: "E-mail"
+    href: "mailto:contato@auraskin.com"
+  - label: "Telefone"
+    href: "tel:+5511945380602"
+
+copyright: "© 2025 — Todos os direitos reservados."

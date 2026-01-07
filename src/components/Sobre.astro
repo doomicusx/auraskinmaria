@@ -1,0 +1,97 @@
+---
+const { title, stat1, stat2, stat3, stat4, sobreIcon } = Astro.props;
+---
+
+<section class="container mx-auto px-2 py-24 js-sobre" id="sobre">
+  <div class="font-inst flex flex-col items-center justify-center gap-12">
+    <div class="flex flex-col gap-4 items-center">
+      <span class="block js-sobre-item">
+        {
+          sobreIcon ? (
+            <img
+              src={sobreIcon}
+              alt=""
+              class="max-w-16 js-sobre-decorativo object-contain"
+              loading="lazy"
+            />
+          ) : (
+            <img
+              src="/images/sobreIcon.svg"
+              alt=""
+              class="max-w-16 js-sobre-decorativo object-contain"
+              loading="lazy"
+            />
+          )
+        }
+      </span>
+
+      <h2
+        class="text-[2.3687rem] cms-text-dark js-sobre-title text-center lg:text-[3.125rem] max-w-[45ch] leading-none tracking-tighter"
+      >
+        {title}
+      </h2>
+    </div>
+
+    <ul
+      class="text-[1.3125rem] cms-text-dark flex flex-wrap items-center justify-center gap-8"
+    >
+      <li>
+        <p class="js-sobre-item">{stat1}</p>
+      </li>
+
+      <span class="hidden lg:block js-sobre-item">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 12 14"
+          class="size-5 transition-transform duration-1200 ease-in-out group-hover:rotate-360 motion-reduce:transform-none"
+        >
+          <path
+            class="cms-fill-dark transition-colors duration-500 ease-in-out group-hover:fill-fill-light"
+            d="M12 6.83686C12 6.83686 9.74419 6.83686 8.14326 6.14382C7.35436 5.72293 6.76119 5.0104 6.49034 4.15826C6.01907 2.84494 5.99822 0 5.99822 0C5.99822 0 5.97746 2.84841 5.50966 4.15826C5.2375 5.00968 4.6447 5.72178 3.85674 6.14382C2.25581 6.83686 0 6.83686 0 6.83686C0 6.83686 2.25581 6.83686 3.85674 7.52991C4.64375 7.95477 5.23602 8.66746 5.50966 9.51894C5.97746 10.8288 5.99822 13.6772 5.99822 13.6772C5.99822 13.6772 6.01907 10.8288 6.49034 9.51894C6.76139 8.66604 7.35438 7.95248 8.14326 7.52991C9.74419 6.83686 12 6.83686 12 6.83686Z"
+          ></path>
+        </svg>
+      </span>
+
+      <li>
+        <p class="js-sobre-item">{stat2}</p>
+      </li>
+
+      <span class="hidden lg:block js-sobre-item">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 12 14"
+          class="size-5 transition-transform duration-1200 ease-in-out group-hover:rotate-360 motion-reduce:transform-none"
+        >
+          <path
+            class="cms-fill-dark transition-colors duration-500 ease-in-out group-hover:fill-fill-light"
+            d="M12 6.83686C12 6.83686 9.74419 6.83686 8.14326 6.14382C7.35436 5.72293 6.76119 5.0104 6.49034 4.15826C6.01907 2.84494 5.99822 0 5.99822 0C5.99822 0 5.97746 2.84841 5.50966 4.15826C5.2375 5.00968 4.6447 5.72178 3.85674 6.14382C2.25581 6.83686 0 6.83686 0 6.83686C0 6.83686 2.25581 6.83686 3.85674 7.52991C4.64375 7.95477 5.23602 8.66746 5.50966 9.51894C5.97746 10.8288 5.99822 13.6772 5.99822 13.6772C5.99822 13.6772 6.01907 10.8288 6.49034 9.51894C6.76139 8.66604 7.35438 7.95248 8.14326 7.52991C9.74419 6.83686 12 6.83686 12 6.83686Z"
+          ></path>
+        </svg>
+      </span>
+
+      <li>
+        <p class="js-sobre-item">{stat3}</p>
+      </li>
+
+      <span class="hidden lg:block js-sobre-item">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 12 14"
+          class="size-5 transition-transform duration-1200 ease-in-out group-hover:rotate-360 motion-reduce:transform-none"
+        >
+          <path
+            class="cms-fill-dark transition-colors duration-500 ease-in-out group-hover:fill-fill-light"
+            d="M12 6.83686C12 6.83686 9.74419 6.83686 8.14326 6.14382C7.35436 5.72293 6.76119 5.0104 6.49034 4.15826C6.01907 2.84494 5.99822 0 5.99822 0C5.99822 0 5.97746 2.84841 5.50966 4.15826C5.2375 5.00968 4.6447 5.72178 3.85674 6.14382C2.25581 6.83686 0 6.83686 0 6.83686C0 6.83686 2.25581 6.83686 3.85674 7.52991C4.64375 7.95477 5.23602 8.66746 5.50966 9.51894C5.97746 10.8288 5.99822 13.6772 5.99822 13.6772C5.99822 13.6772 6.01907 10.8288 6.49034 9.51894C6.76139 8.66604 7.35438 7.95248 8.14326 7.52991C9.74419 6.83686 12 6.83686 12 6.83686Z"
+          ></path>
+        </svg>
+      </span>
+
+      <li>
+        <p class="js-sobre-item">{stat4}</p>
+      </li>
+    </ul>
+  </div>
+</section>

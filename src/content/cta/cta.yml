@@ -1,0 +1,9 @@
+sectionId: "contato"
+
+title: "Entre em contato e agende sua sessão"
+
+buttonText: "Quero esse cuidado"
+buttonLink: "https://api.whatsapp.com/send/?phone=5511945380602&text=Hello+Pedro%21&type=phone_number&app_absent=0"
+
+backgroundImage: "/images/cta.webp"
+backgroundAlt: "Imagem de fundo da seção de contato"

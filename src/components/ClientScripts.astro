@@ -1,0 +1,15 @@
+<script type="module" is:inline>
+  import { initLenis } from "../js/core/lenis.js";
+  import { initHero } from "../js/sections/hero.js";
+  import { initSobre } from "../js/sections/sobre.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initLenis();
+
+    const hero = document.querySelector(".js-hero");
+    if (hero) initHero(hero);
+
+    const sobre = document.querySelector(".js-sobre");
+    if (sobre) initSobre(sobre);
+  });
+</script>
