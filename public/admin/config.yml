@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: "doomicusx/auraskinmaria"
+  repo: doomicusx/auraskinmaria
   branch: main
-  base_url: https://auraskinmaria.pages.dev
-  auth_endpoint: oauth/authorize
+  base_url: https://cms-github-proxy.netlify.app
+  auth_endpoint: auth
 media_folder: "public/images"
 public_folder: "/images"
 collections:
