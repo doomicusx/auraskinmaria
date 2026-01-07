@@ -81,9 +81,24 @@ const ogImage = seo?.ogImage ?? "/images/og-default.jpg";
 
 /* HOVERS */
 .hover-cms-bg-dark:hover { background-color: ${colors.fillDark} !important; }
+.hover-opacity-cms:hover {
+  opacity: 0.6 !important;
+  transition: opacity 0.2s ease-in-out;
+}
 .hover-cms-text-light:hover { color: ${colors.light} !important; }
 .group:hover .group-hover-cms-fill-light { fill: ${colors.light} !important; }
 .hover-cms-text-light-alpha:hover { color: ${colors.light}66 !important; }
+.group:hover .group-hover-rotate-360 { 
+  transform: rotate(360deg); 
+}
+
+.group:hover .group-hover-rotate-neg-360 { 
+  transform: rotate(-360deg); 
+}
+
+.group:hover .group-hover-cms-fill-light { 
+  fill: ${colors.light} !important; 
+}
 `}
       />
     )

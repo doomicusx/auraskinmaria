@@ -144,7 +144,6 @@ const avaliacoes = defineCollection({
 const cta = defineCollection({
   type: "data",
   schema: z.object({
-    sectionId: z.string(),
     title: z.string(),
 
     buttonText: z.string(),
