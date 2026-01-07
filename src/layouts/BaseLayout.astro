@@ -88,22 +88,6 @@ const ogImage = seo?.ogImage ?? "/images/og-default.jpg";
       />
     )
   }
-  <script
-    is:inline
-    src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <script is:inline>
-    // Script para lidar com o redirecionamento após o login
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
 </head>
 
 <body class="cms-bg-light font-jet tracking-normal cms-text-dark">
