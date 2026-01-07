@@ -251,10 +251,12 @@ collections:
           - label: "Filtros de Categorias"
             name: "categories"
             widget: "list"
-            field:
-              label: "Nome da Categoria"
-              name: "category"
-              widget: "string"
+            fields:
+              - {
+                  label: "Nome da Categoria",
+                  name: "category",
+                  widget: "string",
+                }
 
           - { label: "Texto do Botão (CTA)", name: "ctaText", widget: "string" }
           - { label: "Link do Botão (CTA)", name: "ctaLink", widget: "string" }
@@ -297,7 +299,6 @@ collections:
                       widget: "string",
                       hint: "Ex: R$ 150,00",
                     }
-
   # ================= AVALIAÇÕES =================
   - name: "avaliacoes"
     label: "Depoimentos / Avaliações"
