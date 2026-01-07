@@ -24,7 +24,7 @@ subtitle: >-
   para a vida todadadad
 ctaText: Agende sua sessão agora mesmo!
 ctaLink: https://api.whatsapp.com/send/?phone=5511945380602
-backgroundImage: file:///C:/Users/mocot/Downloads/imagens%20linkthree/informa%C3%A7oes%20ao%20excluir.PNG
+backgroundImage: /images/cliente2.webp
 topBarText: "Horário de atendimento: Seg a Sex: 9h às 19h & Sábados: 9h às 14h"
 promoBarText: Promoção de início de ano já ativa — agende agora
 logo: /images/logo.svg
